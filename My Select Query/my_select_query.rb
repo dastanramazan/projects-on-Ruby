@@ -1,9 +1,9 @@
 require 'csv'
 
 class MySelectQuery
-    @csv_string = []  # @ - field - привязка иммено к классу, чтобы потом использовать
-    def initialize(csv) # все конструкторы начинаюся с initialize
-        @csv_string = csv #CSV comma separated values
+    @csv_string = []  
+    def initialize(csv) 
+        @csv_string = csv 
     end
 
     def where(column_name, criteria)
@@ -12,7 +12,7 @@ class MySelectQuery
         headers = lines[0].split(',')
 
         column_name_index = headers.index(column_name)
-        for line in lines do # do необязательно использовать
+        for line in lines do 
             a = line.parse_csv[column_name_index]
 
             if (a == criteria)
@@ -23,4 +23,3 @@ class MySelectQuery
     end
 end
 
-#создать класс и исполнить один метод where с двумя параметрами. Возвращает critearia с именем column_name
