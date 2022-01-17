@@ -1,4 +1,6 @@
 Description
+
+
 We have been provided a dataset of sales from My Online Coffee Shop. It's a CSV (Comma Separated Values) (each columns are separated by , and each line by \n)
 Our goal will be to identify customer who are more likely to buy coffee online.
 
