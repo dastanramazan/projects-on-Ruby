@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Users Page</title>
+        <style>
+        html,
+        body {
+            height: 100%;
+        }
+        
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            font-weight: 100;
+        }
+        .container {
+	        position: absolute;
+	        top: 30%;
+	        left: 30%;
+	        transform: translate(-50%, -50%);
+           
+        }
+        
+        h1{
+            color: black;
+        }
+        table {
+	        width: 600px;
+	        border-collapse: collapse;
+	        overflow: hidden;
+	        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        table .table-header th{ 
+            color: white;
+		    background-color: grey;
+            
+        }
+        th, td {
+	        padding: 15px;
+	        background-color: rgba(255,255,255,0.2);
+	        color: #0d1137;
+            border: 1px solid black;
+        }
+
+        th {
+            text-align: left;
+        }
+        
+        
+        </style>
+        
+    </head>
+    <body>
+    <div class="container">
+        <h1>MVC of Users</h1>
+        <table>
+            <tr class="table-header">
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+                <th>Email</th>
+            </tr>
+            <tbody>
+                <% for i in 0..@users.length-1 do%>
+                    <tr>
+                        <td><%= @users[i]['firstname'] %></td>
+                        <td><%= @users[i]['lastname'] %></td>
+                        <td><%= @users[i]['age'] %></td>
+                        <td><%= @users[i]['email'] %></td>
+                    </tr>
+                <% end %>
+            </tbody>
+        </table>
+    </div>
+    </body>
+</html>
