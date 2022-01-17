@@ -1,2 +1,1 @@
-# ruby-quest06
-
+Projects on Ruby
